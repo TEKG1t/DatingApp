@@ -1,0 +1,35 @@
+<div class="container text-center text-lg-start">
+    <h1 class="display-4 fw-bold lh-1 mb-3">Are you sure about that?</h1>
+    <p class="lead">There is no going back from here you know.</p>
+</div>
+
+<div class="col-md-10 mx-auto col-lg-5">
+
+    <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off" class="p-4 p-md-5 border rounded-3 bg-light">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="username" placeholder="Username"
+            [(ngModel)]="model.username" >
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" name="password" placeholder="Password"
+            [(ngModel)]="model.password" >
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Accept invasion of privacy*
+          <div class="container"></div>
+          <small class="text-muted">*Required field</small>
+        </label>
+      </div>
+      
+      <div class="form-group text-center">
+        <button class="w-46 btn btn-lg btn-primary mr-2" type="submit">Sign me up</button>
+        <button class="w-46 btn btn-sm btn-default mr-2" (click)="cancel()" type="button">Nah I'm out</button>
+      </div>
+      
+      <hr class="my-4">
+      <small class="text-muted">By signing up you agree to our Terms of Service (selling your data)</small>
+    </form>
+    
+</div>
