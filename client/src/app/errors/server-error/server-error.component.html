@@ -1,0 +1,15 @@
+<h4>Internal Server Error - F5 and not alt F4!</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class="font-weight-bold">Note: If you are seeing this u dumb</p>
+    <p>What do caveman brain do next</p>
+    <ol>
+        <li>Open dev tools in browser</li>
+        <li>Cry while inspecting network tab</li>
+        <li>Check failing request and will to life</li>
+        <li>Examine URL because you could be big stupid again</li>
+        <li>Reproduce the error in Postman if you know what this is</li>
+    </ol>
+    <p>Only nerds will understand the stack trace</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
