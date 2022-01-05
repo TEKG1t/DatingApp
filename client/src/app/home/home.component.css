@@ -1,0 +1,24 @@
+.carouselStyle{
+    align-items: center;
+    text-align: center;
+    max-width: 10000px;
+    max-height: 650px;
+}
+
+.slideCon{
+    background-color: rgba(255, 255, 255, 0.0);
+    max-width: 10000px;
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imgStyle{
+    height: 300px;
+    width: 300px;
+    border: oldlace;
+    border-style: groove;
+    border-radius: 5%;
+}

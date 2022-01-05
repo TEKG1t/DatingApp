@@ -1,13 +1,54 @@
-<div class="container mt-5">
-    <div *ngIf="!registerMode" style="text-align: center;">
-        <h1>Find zero matches Today!</h1>
-        <p class="lead">Or pay a monthly fee of not only a lot of money but of all your pride as well!</p>
-        <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2">Sounds good!</button>
-            <button (click)="registerToggle()" class="btn btn-info btn-lg">sOuNdS gOoD!</button>
-        </div>
+<div *ngIf="!registerMode">
+    <div class="carouselStyle">
+        <carousel>
+            <slide>
+                <div class="row slideCon">
+                    <div class="container">
+                        <h1><i class="fa fa-male"></i><i class="fa fa-female"></i> Find zero matches Today!</h1>
+                        <p class="lead">Or pay a monthly fee of not only a lot of money but of all your pride as
+                            well <i class="fa fa-money"></i></p>
+                        <div class="text-center">
+                            <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2">Sounds
+                                good!</button>
+                            <button (click)="registerToggle()" class="btn btn-info btn-lg">sOuNdS gOoD!</button>
+                        </div>
+                    </div>
+                </div>
+              </slide>
+              <slide>
+                <div class="slideCon">
+                    <ul style="margin: auto;">
+                        <div>
+                            <h1><i class="fa fa-exclamation-triangle"></i> Don't let your Upsies stay Whoopsies!</h1>
+                            <p class="lead">Try out our sophisticated error system for FREE <i class="fa fa-line-chart"></i></p>
+                        </div>
+                        <div class="" style="margin-top: 10px;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <app-test-errors></app-test-errors>
+                                </div>
+                                <div class="col-6">
+                                    <img class="imgStyle" src="https://randomuser.me/api/portraits/men/51.jpg" alt="third slide">
+                                    <p style="font-size: small;">*This is a real user we didn't ask permission from</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    
+                </div>
+            </slide>
+            <slide>
+                <div class="row slideCon">
+                    <div class="container">
+                        <h1> Your <i class="fa fa-heart"></i> is still not convinced?</h1>
+                        <p class="lead">It's not like we care <i class="fa fa-thumbs-o-up"></i></p>
+                    </div>
+                </div>
+              </slide>
+        </carousel>
+        <br/>
     </div>
-</div> 
+</div>
 
 <div *ngIf="registerMode" class="container">
     <div class="row justify-content-center">
