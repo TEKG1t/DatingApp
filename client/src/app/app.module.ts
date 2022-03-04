@@ -23,6 +23,7 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeCarouselComponent } from './home/home-carousel/home-carousel.component';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 
 
 @NgModule({
@@ -51,7 +52,9 @@ import { HomeCarouselComponent } from './home/home-carousel/home-carousel.compon
     CarouselModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+
   ],
   bootstrap: [AppComponent]
 })
